@@ -1,0 +1,57 @@
+#why .container{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#why .container h2{
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px 0;
+    margin-bottom: 20px;
+
+}
+#whyUs{
+    display: flex;
+    justify-content: space-between;
+}
+#whyImg{
+    width: 50%;
+}
+#whyImg img{
+    width: 100%;
+}
+#whyUsContent{
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+height: 450px;
+    -webkit-box-shadow: 0px 1px 62px -32px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 1px 62px -32px rgba(0,0,0,0.75);
+box-shadow: 0px 1px 62px -32px rgba(0,0,0,0.75);
+}
+.whyProps{
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+
+}
+.whyProps span{
+    
+    background-color: #615dc2;
+    border-radius: 50%;
+    padding: 5px;
+    color: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.whyProps p{
+    width: 70%;
+}
+

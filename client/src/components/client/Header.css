@@ -1,0 +1,42 @@
+.navbar{
+    padding: 25px 0;
+    background-color: transparent;
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+
+}
+#nav div{
+    display: flex;
+    justify-content: space-between;
+}
+#nav div ul{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    list-style: none;
+}
+.navbar  div a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+#nav div ul li a:hover{
+    color: rgb(199, 193, 193);
+}
+#nav div  ul li a.active{
+    border-bottom: 3px solid white;
+    padding-bottom: 3px;
+}
+.scrolled{
+    background-color: white;
+    color: black !important;
+    padding: 25px 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+
+}
+.scrolled div a{
+    color: black;
+}

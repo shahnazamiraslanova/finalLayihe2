@@ -1,0 +1,32 @@
+#formContact .container{
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#formContact h3{
+    font-size: 50px;
+}
+#formContact form{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#formContact form input,textarea{
+    margin-top: 20px;
+    width: 500px;
+    padding: 15px 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+#contactSubmit{
+    background-color: #7971EA;
+    color: white;
+    border-radius: 15px;
+    width: 500px;
+    padding: 15px 10px;
+
+
+}

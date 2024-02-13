@@ -1,0 +1,45 @@
+#contact {
+    background: url('https://preview.colorlib.com/theme/oneschool/images/hero_1.jpg') center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact h1 {
+    position: relative;
+    color: #fff;
+    text-align: center;
+
+}
+
+#contact:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    background-color: #343a40;
+    /* Adjust the color and opacity as needed */
+    opacity: .9;
+    z-index: 0;
+}
+
+iframe {
+    width: 1000px;
+    height: 450px;
+    margin-top: 50px;
+   
+
+}
+#contactAll .container{
+    padding-top: 50px;
+    flex-direction: column;
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+#contactAll .container h2{
+    font-size: 50px;
+}
