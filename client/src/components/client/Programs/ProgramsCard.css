@@ -1,0 +1,25 @@
+#programsCards{
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+}
+#eachProgramCard{
+    width: 30%;
+    border: 1px solid rgb(213, 213, 213);
+    overflow: hidden;
+    border-radius: 20px;
+}
+#eachProgramCard img{
+    width: 100%;
+    height: 200px;
+}
+#programCardBody{
+    padding: 10px ;
+}
+#programCardBody p{
+    padding: 10px 0;
+}
+#programCardBody a{
+    text-decoration: none;
+    color: #615DC2;
+}

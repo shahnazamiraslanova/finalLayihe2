@@ -27,7 +27,7 @@ const magicTeachersController = {
     },
     deleteTeachers: async (req, res) => {
         try {
-            const id = req.params._id;
+            const id = req.params.id;
             const deleteTeacher = await Teachers.findByIdAndDelete(id);
             res.status(200).json("Teacher Deleted!");
         } catch (error) {
@@ -36,7 +36,7 @@ const magicTeachersController = {
     },
     getTeacherById: async (req, res) => {
         try {
-            const id = req.params._id;
+            const id = req.params.id;
             const teacher = await Teachers.findById(id);
             if (!teacher) {
                 return res.status(404).json({ message: "Teacher not found" });

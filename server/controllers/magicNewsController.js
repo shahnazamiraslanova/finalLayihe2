@@ -14,7 +14,8 @@ const magicNewsController={
            const oneNew=new News({
             img:req.body.img,
             title: req.body.title,
-            description:req.body.description
+            description:req.body.description,
+            date:Date.now()
 
            })
           await oneNew.save()
@@ -26,7 +27,7 @@ const magicNewsController={
     },
     deleteNew:async(req,res)=>{
         try{
-           const id=req.params._id
+           const id=req.params.id
            const deletedNew=await News.findByIdAndDelete(id);
            res.status(200).json("News Deleted!")
         }
@@ -36,7 +37,7 @@ const magicNewsController={
     },
     getNewsById: async (req, res) => {
         try {
-            const id = req.params._id;
+            const id = req.params.id;
             const idNew = await News.findById(id);
             if (!idNew) {
                 return res.status(404).json({ message: "News not found" });

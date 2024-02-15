@@ -6,6 +6,7 @@ const magicNewsController = require("./controllers/magicNewsController");
 const magicTeachersController = require("./controllers/magicTeachersController");
 const magicProgramController = require("./controllers/magicProgramController");
 const magicCoursesController = require("./controllers/magicCoursesController");
+const magicContactController = require("./controllers/magicContactController");
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -34,6 +35,12 @@ app.get("/courses", magicCoursesController.getAllCourses);
 app.post("/courses", magicCoursesController.postCourse);
 app.delete("/courses/:id", magicCoursesController.deleteCourses);
 app.get("/courses/:id", magicCoursesController.getCourseById);
+
+
+app.get("/contacts", magicContactController.getAllContact);
+app.post("/contacts", magicContactController.postContact);
+app.delete("/contacts/:id", magicContactController.deleteContact);
+app.get("/contacts/:id", magicContactController.getContactById);
 
 app.listen(PORT, () => {
     console.log("Your App is running on port", PORT);

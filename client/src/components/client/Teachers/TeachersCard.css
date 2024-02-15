@@ -1,0 +1,44 @@
+#teachersCards {
+    padding: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#teachersTitle {
+    text-align: center;
+    padding: 50px 0 20px 0;
+}
+
+#eachTeacherCard {
+    position: relative;
+    margin-top: 120px;
+    width: 30%;
+    border: 1px solid rgb(213, 213, 213);
+    border-radius: 20px;
+}
+
+#eachTeacherCard img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    top: -110px;
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+}
+
+#teacherCardBody {
+    padding: 130px 10px 10px 10px ;
+    text-align: center;
+}
+
+#teacherCardBody p {
+    padding: 10px 0;
+}
+
+#teacherCardBody a {
+    text-decoration: none;
+    color: #615DC2;
+}

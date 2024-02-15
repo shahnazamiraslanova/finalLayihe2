@@ -1,21 +1,32 @@
 #sign{
-    width: 100%;
+    background: url('https://preview.colorlib.com/theme/oneschool/images/hero_1.jpg') center/cover;
     height: 100vh;
-    background: url('https://preview.colorlib.com/theme/oneschool/images/hero_1.jpg')  center/cover;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;}
 #sign .container{
     height: 100vh;
     width: 100%;
-    background-color: rgba(7, 7, 7, 0.73);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
+#sign:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #343a40;
+    /* Adjust the color and opacity as needed */
+    opacity: .9;
+    z-index: 0;
+}
 #signArticle{
+    z-index: 3;
     color: white;
     width: 40%;
-    font-family: 'Roboto', sans-serif;
 
 
 
@@ -43,6 +54,7 @@
     }}
 
 #signForm{
+    z-index: 1;
     width: 40%;
     background-color: white;
     padding: 10px;
@@ -54,14 +66,12 @@
     width: 100%;
 }
 #signForm h3{
-    font-family: 'Roboto', sans-serif;
 
     color: black;
     font-size: 30px;
     padding: 10px 40px;
 }
 #signForm form input,select,button{
-    font-family: 'Roboto', sans-serif;
     outline: none;
 
     border-radius: 10px;
@@ -72,7 +82,6 @@
     -webkit-box-shadow: 10px 10px 196px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 10px 10px 196px 0px rgba(0,0,0,0.3);}
 #signForm form button{
-    font-family: 'Roboto', sans-serif;
 
     background-color: #7971EA;
     color: white;

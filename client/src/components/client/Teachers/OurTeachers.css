@@ -1,4 +1,4 @@
-#programs {
+#teachers {
     background: url('https://preview.colorlib.com/theme/oneschool/images/hero_1.jpg') center/cover;
     height: 100vh;
     display: flex;
@@ -6,14 +6,14 @@
     justify-content: center;
 }
 
-#programs h1 {
+#teachers h1 {
     position: relative;
     color: #fff;
     text-align: center;
 
 }
 
-#programs:before {
+#teachers:before {
     content: '';
     position: absolute;
     top: 0;

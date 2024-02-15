@@ -1,19 +1,17 @@
-#programs {
+#news {
     background: url('https://preview.colorlib.com/theme/oneschool/images/hero_1.jpg') center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-#programs h1 {
+#news h1 {
     position: relative;
     color: #fff;
     text-align: center;
 
 }
-
-#programs:before {
+#news:before {
     content: '';
     position: absolute;
     top: 0;

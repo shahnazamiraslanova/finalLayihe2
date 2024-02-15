@@ -25,7 +25,7 @@ const magicCoursesController = {
     },
     deleteCourses: async (req, res) => {
         try {
-            const id = req.params._id;
+            const id = req.params.id;
             const deleteCourse = await Courses.findByIdAndDelete(id);
             res.status(200).json("Program Deleted!");
         } catch (error) {
@@ -34,7 +34,7 @@ const magicCoursesController = {
     },
     getCourseById: async (req, res) => {
         try {
-            const id = req.params._id;
+            const id = req.params.id;
             const course = await Courses.findById(id);
             if (!course) {
                 return res.status(404).json({ message: "Program not found" });

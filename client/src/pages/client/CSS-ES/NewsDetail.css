@@ -1,0 +1,24 @@
+#newsCardsDetail img{
+    width: 100%;
+}
+#detailsCardBodyNews {
+    padding-bottom: 100px;
+}
+#detailsCardBodyNews h1{
+    padding: 20px 0;
+    font-size: 50px;
+}
+
+#detailsCardBodyNews p{
+    line-height: 30px;
+    font-size: 22px;
+    width: 80%;
+    margin-bottom: 50px;
+}
+#detailsCardBodyNews a{
+    padding: 15px 20px;
+    color: white;
+    background-color: #615DC1;
+    text-decoration: none;
+    border-radius: 10px;
+}

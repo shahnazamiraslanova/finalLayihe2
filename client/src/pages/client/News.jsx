@@ -1,9 +1,14 @@
 import React from 'react'
+import LastNews from '../../components/client/News/LastNews'
+import MainNews from '../../components/client/News/MainNews'
 
 const News = () => {
   return (
-    <div>News</div>
-  )
+<>
+<LastNews/>
+<MainNews/>
+
+</>  )
 }
 
 export default News
