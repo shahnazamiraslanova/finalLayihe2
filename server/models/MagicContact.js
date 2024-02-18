@@ -3,7 +3,7 @@ const mongoose=require('mongoose');
     name:String,
     lastName:String,
     email:String,
-    phone:Number,
+    phone:String,
     message:String
 
  });

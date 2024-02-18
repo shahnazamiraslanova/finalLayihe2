@@ -1,40 +1,40 @@
-.navbar {
+.navbarAdmin {
     padding: 25px 5px;
-    background-color: transparent;
+    background-color: black;
     width: 100%;
     position: fixed;
     z-index: 5;
 }
 
-#nav .container {
+#navAdmin .container {
     width: 100% !important;
     padding: 0 20px;
     margin: auto;
 }
 
-#nav div {
+#navAdmin div {
     display: flex;
     justify-content: space-between;
 }
 
-#nav div ul {
+#navAdmin div ul {
     display: flex;
     justify-content: space-between;
     width: 70% !important;
     list-style: none;
 }
 
-.navbar div a {
+.navbarAdmin div a {
     text-decoration: none;
     color: white;
     font-size: 18px;
 }
 
-#nav div ul li a:hover {
+#navAdmin div ul li a:hover {
     color: rgb(199, 193, 193);
 }
 
-#nav div ul li a.active {
+#navAdmin div ul li a.active {
     border-bottom: 3px solid white;
     padding-bottom: 3px;
 }
@@ -62,20 +62,20 @@
 
 /* For tablet */
 @media screen and (max-width: 768px) {
-    #nav div ul {
+    #navAdmin div ul {
         display: none; /* Hide the navigation links by default */
     }
     
-    .navbar {
+    .navbarAdmin {
         padding: 15px; /* Adjust padding */
     }
     
-    .navbar div {
+    .navbarAdmin div {
         justify-content: flex-end; /* Align the hamburger menu to the right */
     }
 
     /* Show the hamburger menu */
-    .navbar .menu-toggle svg {
+    .navbarAdmin .menu-toggle svg {
         display: block;
         cursor: pointer;
         color: white;
@@ -83,7 +83,7 @@
     }
 
     /* Hide the container when the hamburger menu is active */
-    #nav.active div ul {
+    #navAdmin.active div ul {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -96,12 +96,12 @@
     }
 
     /* Style the links in the hamburger menu */
-    #nav.active div ul li {
+    #navAdmin.active div ul li {
         text-align: center;
         margin-bottom: 10px;
     }
 
-    #nav.active div ul li a {
+    #navAdmin.active div ul li a {
         color: white;
         text-decoration: none;
         font-size: 18px;
@@ -110,22 +110,22 @@
 
 /* For desktop */
 @media screen and (min-width: 769px) {
-    .navbar .menu-toggle svg {
+    .navbarAdmin .menu-toggle svg {
         display: none; /* Hide the hamburger menu icon */
     }
 
-    #nav div ul {
+    #navAdmin div ul {
         display: flex;
         justify-content: space-between;
         width: 60%;
         list-style: none;
     }
 
-    #nav div ul li a:hover {
+    #navAdmin div ul li a:hover {
         color: rgb(199, 193, 193);
     }
 
-    #nav div ul li a.active {
+    #navAdmin div ul li a.active {
         border-bottom: 3px solid white;
         padding-bottom: 3px;
     }

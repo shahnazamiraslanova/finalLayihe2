@@ -17,10 +17,9 @@ const magicTeachersController = {
                 subject: req.body.subject,
                 experience: req.body.experience,
                 description: req.body.description,
-
             });
             await teacher.save();
-            res.status(201).json(teacher); // Changed status to 201 for resource creation
+            res.status(201).json(teacher);
         } catch (error) {
             res.status(500).json(error);
         }
@@ -42,6 +41,20 @@ const magicTeachersController = {
                 return res.status(404).json({ message: "Teacher not found" });
             }
             res.status(200).json(teacher);
+        } catch (error) {
+            res.status(500).json(error);
+        }
+    },
+    updateTeacher: async (req, res) => {
+        try {
+            const id = req.params.id;
+            const updates = req.body;
+            const options = { new: true }; // To return the updated document
+            const updatedTeacher = await Teachers.findByIdAndUpdate(id, updates, options);
+            if (!updatedTeacher) {
+                return res.status(404).json({ message: "Teacher not found" });
+            }
+            res.status(200).json(updatedTeacher);
         } catch (error) {
             res.status(500).json(error);
         }

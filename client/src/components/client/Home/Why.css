@@ -12,6 +12,7 @@
 }
 #whyUs{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 #whyImg{
@@ -53,3 +54,14 @@ box-shadow: 0px 1px 62px -32px rgba(0,0,0,0.75);
     width: 70%;
 }
 
+@media screen and (max-width: 768px) {
+    #whyImg{
+        display: none;
+    }
+   
+  }
+  @media screen and (max-width: 480px) {
+    #whyImg{
+        display: none;
+    }
+  }

@@ -5,5 +5,22 @@
   font-family: "Manrope";
 }
 .container{
-  padding:0 200px;
+
+max-width: 84%;
+margin: auto;}
+@media screen and (max-width: 768px) {
+.container {
+      width: 80%; /* Adjust as needed */
+  }
+
+  
+}
+
+/* For mobile */
+@media screen and (max-width: 480px) {
+  .container {
+      width: 90%; /* Adjust as needed */
+  }
+
+  
 }

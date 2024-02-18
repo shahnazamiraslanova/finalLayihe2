@@ -8,7 +8,15 @@ import Porgrams from "../pages/client/Porgrams";
 import ProgramsDetail from "../pages/client/ProgramsDetail";
 import Root from "../pages/client/Root";
 import Teachers from "../pages/client/Teachers";
-import NewsDetil from "../pages/client/NewsDetail"
+import NewsDetil from "../pages/client/NewsDetail";
+import CoursesAdmin from "../pages/admin/CoursesAdmin";
+import TeachersAdmin from "../pages/admin/TeachersAdmin";
+import AdminsAdmin from "../pages/admin/AdminsAdmin";
+import ProgramsAdmin from "../pages/admin/ProgramsAdmin";
+import NewsAdmin from "../pages/admin/NewsAdmin";
+import UsersAdmin from "../pages/admin/UsersAdmin";
+import ContactsAdmin from "../pages/admin/ContactsAdmin";
+import LoginToAdmin from "../pages/admin/LoginToAdmin";
 
 const ROUTES = [
     {
@@ -30,9 +38,12 @@ const ROUTES = [
         {
           path: "programs",
           element: <Porgrams />,
-          children:[{
-            
-          }]
+          children: [
+            {
+              path: ":id",
+              element: <ProgramsDetail />
+            }
+          ]
         },
         {
           path: "teachers",
@@ -43,28 +54,54 @@ const ROUTES = [
           element: <Contact />,
         },
         {
-          path:"programs/:id",
-          element:<ProgramsDetail/>
-        },
-        {
-          path:"news/:id",
-          element:<NewsDetil/>
+          path: "news/:id",
+          element: <NewsDetil />
         }
-        
-       
       ],
     },
     {
       path: "/admin",
+      element: <LoginToAdmin />,
+    },
+    {
+      path: "/73QmFV5$1cNlDzO!S6p9oWvXr8Kt2yG3JhU*AqIbR7dExP4gTfHnZsYwMeCaB0iL",
       element: <AdminRoot />,
       children: [
+        
         {
-          path: "",
+          path: "dashboard",
           element: <Dashboard />,
+        },
+        {
+          path: "admincourses",
+          element: <CoursesAdmin />,
+        },
+        {
+          path: "adminteachers",
+          element: <TeachersAdmin />,
+        },
+        {
+          path: "adminadmins",
+          element: <AdminsAdmin />,
+        },
+        {
+          path: "adminprograms",
+          element: <ProgramsAdmin />,
+        },
+        {
+          path: "adminnews",
+          element: <NewsAdmin />,
+        },
+        {
+          path: "adminusers",
+          element: <UsersAdmin />,
+        },
+        {
+          path: "admincontacts",
+          element: <ContactsAdmin />,
         }
-       
       ],
     },
   ];
-  
-  export default ROUTES;
+
+export default ROUTES;

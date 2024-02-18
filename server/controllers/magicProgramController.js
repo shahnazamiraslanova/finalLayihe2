@@ -17,7 +17,7 @@ const magicProgramController = {
                 title: req.body.title
             });
             await program.save();
-            res.status(201).json(program); // Changed status to 201 for resource creation
+            res.status(201).json(program);
         } catch (error) {
             res.status(500).json(error);
         }
@@ -39,6 +39,20 @@ const magicProgramController = {
                 return res.status(404).json({ message: "Program not found" });
             }
             res.status(200).json(program);
+        } catch (error) {
+            res.status(500).json(error);
+        }
+    },
+    updateProgram: async (req, res) => {
+        try {
+            const id = req.params.id;
+            const updates = req.body;
+            const options = { new: true }; // To return the updated document
+            const updatedProgram = await Programs.findByIdAndUpdate(id, updates, options);
+            if (!updatedProgram) {
+                return res.status(404).json({ message: "Program not found" });
+            }
+            res.status(200).json(updatedProgram);
         } catch (error) {
             res.status(500).json(error);
         }

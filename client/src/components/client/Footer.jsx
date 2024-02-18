@@ -35,7 +35,7 @@ const Footer = () => {
 
 
         <div id='footBottom'>
-        Copyright ©2024 All rights reserved | This template is made with  by   <a target='blank' href="https://www.linkedin.com/in/shahnaz-amiraslanova-4a1391294/">Shahnaz Amiraslanova</a>
+   <p>     Copyright ©2024 All rights reserved | This template is made with  by </p>  <a target='blank' href="https://www.linkedin.com/in/shahnaz-amiraslanova-4a1391294/">Shahnaz Amiraslanova</a>
         </div>
       </div>
     </div>

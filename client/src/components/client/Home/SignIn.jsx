@@ -9,7 +9,7 @@ const SignIn = () => {
             <div className="container">
                 <div id='signArticle'>
                     <h2>WELCOME!</h2>
-                    <p>You can get all information about our course from this site!</p>
+                    <p>Sign in to take course!</p>
                 </div>
                 <div id='signForm'>
                 <h3>Sign In Your Page!</h3>

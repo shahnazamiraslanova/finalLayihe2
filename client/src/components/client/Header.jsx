@@ -1,9 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
 
 const Header = () => {
   const navRef = useRef(null);
+  const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,17 +27,24 @@ const Header = () => {
     };
   }, []);
 
+  const toggleMenu = () => {
+    setIsActive(!isActive);
+  };
+
   return (
-    <div id='nav' ref={navRef} className="navbar">
+    <div id='nav' ref={navRef} className={`navbar ${isActive ? 'active' : ''}`}>
       <div className="container">
         <NavLink to="/" className="logo">Magic Academy</NavLink>
+        <div className="menu-toggle" onClick={toggleMenu}>
+        <FontAwesomeIcon icon={faBars} />
+        </div>
         <ul>
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/courses">Courses</NavLink></li>
-          <li><NavLink to="/teachers">Teachers</NavLink></li>
-          <li><NavLink to="/programs">Programs</NavLink></li>
-          <li><NavLink to="/news">News</NavLink></li>
-          <li><NavLink to="/contact">Contact</NavLink></li>
+          <li><NavLink exact to="/" onClick={toggleMenu}>Home</NavLink></li>
+          <li><NavLink to="/courses" onClick={toggleMenu}>Courses</NavLink></li>
+          <li><NavLink to="/teachers" onClick={toggleMenu}>Teachers</NavLink></li>
+          <li><NavLink to="/programs" onClick={toggleMenu}>Programs</NavLink></li>
+          <li><NavLink to="/news" onClick={toggleMenu}>News</NavLink></li>
+          <li><NavLink to="/contact" onClick={toggleMenu}>Contact</NavLink></li>
         </ul>
       </div>
     </div>

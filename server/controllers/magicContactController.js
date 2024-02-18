@@ -11,16 +11,15 @@ const magicContactController = {
     },
     postContact: async (req, res) => {
         try {
-            const contact = new Teachers({
+            const contact = new Contacts({
                 name: req.body.name,
                 lastName: req.body.lastName,
                 email: req.body.email,
-                number: req.body.number,
+                phone: req.body.phone,
                 message: req.body.message,
-
             });
             await contact.save();
-            res.status(201).json(contact); // Changed status to 201 for resource creation
+            res.status(201).json(contact);
         } catch (error) {
             res.status(500).json(error);
         }
@@ -39,9 +38,23 @@ const magicContactController = {
             const id = req.params.id;
             const contact = await Contacts.findById(id);
             if (!contact) {
-                return res.status(404).json({ message: "Teacher not found" });
+                return res.status(404).json({ message: "Contact not found" });
             }
             res.status(200).json(contact);
+        } catch (error) {
+            res.status(500).json(error);
+        }
+    },
+    updateContact: async (req, res) => {
+        try {
+            const id = req.params.id;
+            const updates = req.body;
+            const options = { new: true }; // To return the updated document
+            const updatedContact = await Contacts.findByIdAndUpdate(id, updates, options);
+            if (!updatedContact) {
+                return res.status(404).json({ message: "Contact not found" });
+            }
+            res.status(200).json(updatedContact);
         } catch (error) {
             res.status(500).json(error);
         }

@@ -12,13 +12,13 @@ const magicCoursesController = {
     postCourse: async (req, res) => {
         try {
             const course = new Courses({
-                img:req.body.img,
-                title:req.body.title,
-                price:req.body.price,
-                description:req.body.description,
+                img: req.body.img,
+                title: req.body.title,
+                price: req.body.price,
+                description: req.body.description,
             });
             await course.save();
-            res.status(201).json(course); // Changed status to 201 for resource creation
+            res.status(201).json(course);
         } catch (error) {
             res.status(500).json(error);
         }
@@ -40,6 +40,20 @@ const magicCoursesController = {
                 return res.status(404).json({ message: "Program not found" });
             }
             res.status(200).json(course);
+        } catch (error) {
+            res.status(500).json(error);
+        }
+    },
+    updateCourse: async (req, res) => {
+        try {
+            const id = req.params.id;
+            const updates = req.body;
+            const options = { new: true }; // To return the updated document
+            const updatedCourse = await Courses.findByIdAndUpdate(id, updates, options);
+            if (!updatedCourse) {
+                return res.status(404).json({ message: "Course not found" });
+            }
+            res.status(200).json(updatedCourse);
         } catch (error) {
             res.status(500).json(error);
         }
