@@ -25,8 +25,8 @@ const userController = {
 
     createUser: async (req, res) => {
         try {
-            const { name, lastName, email, username, password } = req.body;
-            const user = new User({ name, lastName, email, username, password });
+            const { name, lastName, email, username, password, favs, cart } = req.body;
+            const user = new User({ name, lastName, email, username, password, favs, cart });
             await user.save();
             res.status(201).json(user);
         } catch (error) {

@@ -1,0 +1,84 @@
+#coursesGrid .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+ 
+  
+  .courseCard {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 30%;
+    margin-top: 50px;
+  }
+  
+  .courseCard img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .courseCardBody {
+    padding: 20px;
+  }
+  
+  .courseCardBody h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .price {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 25px;
+  }
+  .filters{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+    align-items: center;
+  }
+  .filters input,select{
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  .icons svg {
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .icons svg:hover {
+    color: #ff5722;
+  }
+  
+  .courseCard a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .courseCard a:hover {
+    color: #ff5722;
+  }
+  

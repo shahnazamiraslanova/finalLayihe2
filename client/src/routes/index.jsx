@@ -17,6 +17,8 @@ import NewsAdmin from "../pages/admin/NewsAdmin";
 import UsersAdmin from "../pages/admin/UsersAdmin";
 import ContactsAdmin from "../pages/admin/ContactsAdmin";
 import LoginToAdmin from "../pages/admin/LoginToAdmin";
+import FavoritesPage from "../pages/client/FavoritesPage";
+import CartPage from "../pages/client/CartPage";
 
 const ROUTES = [
     {
@@ -36,11 +38,19 @@ const ROUTES = [
           element: <News />,
         },
         {
+          path: "favs",
+          element: <FavoritesPage />,
+        },
+        {
+          path: "cart",
+          element: <CartPage />,
+        },
+        {
           path: "programs",
           element: <Porgrams />,
           children: [
             {
-              path: ":id",
+              path: ":_id",
               element: <ProgramsDetail />
             }
           ]

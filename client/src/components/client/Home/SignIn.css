@@ -73,7 +73,12 @@
     font-size: 30px;
     padding: 10px 40px;
 }
-#signForm form input,select,button{
+#signForm p{
+    padding: 5px 0;
+    text-align: center;
+}
+
+#signForm form input,button{
     outline: none;
 width: 85%;
     border-radius: 10px;

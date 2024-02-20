@@ -5,7 +5,14 @@
     position: fixed;
     z-index: 5;
 }
-
+.mainIcons{
+    color: white;
+    font-size: 20px;
+}
+.scrolled .mainIcons{
+    color: black;
+    font-size: 20px;
+}
 #nav .container {
     width: 100% !important;
     padding: 0 20px;
@@ -15,12 +22,14 @@
 #nav div {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 #nav div ul {
     display: flex;
     justify-content: space-between;
     width: 70% !important;
+    align-items: center;
     list-style: none;
 }
 
@@ -107,6 +116,7 @@
         font-size: 18px;
     }
 }
+
 
 /* For desktop */
 @media screen and (min-width: 769px) {
