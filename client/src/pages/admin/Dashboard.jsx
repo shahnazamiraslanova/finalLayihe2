@@ -103,10 +103,7 @@ const Dashboard = () => {
                 <h3>Contacts</h3>
                 <p>{counts.contacts}</p>
             </div>
-            <div className="dashboard-card">
-                <h3>Contacts</h3>
-                <canvas id="contactsChart" width="500" height="500"></canvas>
-            </div>
+           
         </div>
     );
 };

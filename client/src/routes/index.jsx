@@ -1,3 +1,4 @@
+
 import AdminRoot from "../pages/admin/Adminroot";
 import Dashboard from "../pages/admin/Dashboard";
 import Contact from "../pages/client/Contact";
@@ -19,99 +20,101 @@ import ContactsAdmin from "../pages/admin/ContactsAdmin";
 import LoginToAdmin from "../pages/admin/LoginToAdmin";
 import FavoritesPage from "../pages/client/FavoritesPage";
 import CartPage from "../pages/client/CartPage";
-
+import SignUp from "../pages/client/SignUp";
 const ROUTES = [
-    {
+  {
       path: "/",
       element: <Root />,
       children: [
-        {
-          path: "",
-          element: <Home />,
+          {
+              path: "/",
+              element: <Home />
+          },
+          {
+              path: "courses",
+              element: <Courses />
+          },
+          {
+              path: "news",
+              element: <News />
+          },
+          {
+              path: "favs",
+              element: <FavoritesPage />
+          },
+          {
+              path: "cart",
+              element: <CartPage />
+          },
+          {
+              path: "programs",
+              element: <Porgrams />,
+              
+          },
+          {
+              path: "teachers",
+              element: <Teachers />
+          },
+          {
+            path: "signup",
+            element: <SignUp />
         },
-        {
-          path: "courses",
-          element: <Courses />,
-        },
-        {
-          path: "news",
-          element: <News />,
-        },
-        {
-          path: "favs",
-          element: <FavoritesPage />,
-        },
-        {
-          path: "cart",
-          element: <CartPage />,
-        },
-        {
-          path: "programs",
-          element: <Porgrams />,
-          children: [
-            {
-              path: ":_id",
-              element: <ProgramsDetail />
-            }
-          ]
-        },
-        {
-          path: "teachers",
-          element: <Teachers />,
-        },
-        {
-          path: "contact",
-          element: <Contact />,
-        },
-        {
-          path: "news/:id",
-          element: <NewsDetil />
+          {
+              path: "contact",
+              element: <Contact />
+          },
+          {
+              path: "news/:id",
+              element: <NewsDetil />
+          },
+          {
+            path: "programs/:id",
+            element: <ProgramsDetail />
         }
-      ],
-    },
-    {
+      ]
+  },
+  {
       path: "/admin",
-      element: <LoginToAdmin />,
-    },
-    {
+      element: <LoginToAdmin />
+  },
+  {
       path: "/73QmFV5$1cNlDzO!S6p9oWvXr8Kt2yG3JhU*AqIbR7dExP4gTfHnZsYwMeCaB0iL",
       element: <AdminRoot />,
       children: [
-        
-        {
-          path: "dashboard",
-          element: <Dashboard />,
-        },
-        {
-          path: "admincourses",
-          element: <CoursesAdmin />,
-        },
-        {
-          path: "adminteachers",
-          element: <TeachersAdmin />,
-        },
-        {
-          path: "adminadmins",
-          element: <AdminsAdmin />,
-        },
-        {
-          path: "adminprograms",
-          element: <ProgramsAdmin />,
-        },
-        {
-          path: "adminnews",
-          element: <NewsAdmin />,
-        },
-        {
-          path: "adminusers",
-          element: <UsersAdmin />,
-        },
-        {
-          path: "admincontacts",
-          element: <ContactsAdmin />,
-        }
-      ],
-    },
-  ];
+          {
+              path: "dashboard",
+              element: <Dashboard />
+          },
+          {
+              path: "admincourses",
+              element: <CoursesAdmin />
+          },
+          {
+              path: "adminteachers",
+              element: <TeachersAdmin />
+          },
+          {
+              path: "adminadmins",
+              element: <AdminsAdmin />
+          },
+          {
+              path: "adminprograms",
+              element: <ProgramsAdmin />
+          },
+          {
+              path: "adminnews",
+              element: <NewsAdmin />
+          },
+          {
+              path: "adminusers",
+              element: <UsersAdmin />
+          },
+          {
+              path: "admincontacts",
+              element: <ContactsAdmin />
+          }
+      ]
+  }
+];
 
 export default ROUTES;

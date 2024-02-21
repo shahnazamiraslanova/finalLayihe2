@@ -70,9 +70,9 @@
 }
 
 /* For tablet */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
     #nav div ul {
-        display: none; /* Hide the navigation links by default */
+        display: none; 
     }
     
     .navbar {
@@ -90,15 +90,14 @@
         color: white;
         font-size: 24px;
     }
-
-    /* Hide the container when the hamburger menu is active */
+  
     #nav.active div ul {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Adjust as needed */
+        top: 50px; /* Adjust as needed */
         left: 0;
-        width: 100%;
+        width: 100% !important;
         background-color: #343a40;
         padding: 10px 0;
         z-index: 10;
@@ -108,6 +107,7 @@
     #nav.active div ul li {
         text-align: center;
         margin-bottom: 10px;
+        color: white;
     }
 
     #nav.active div ul li a {
@@ -119,7 +119,7 @@
 
 
 /* For desktop */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 950px) {
     .navbar .menu-toggle svg {
         display: none; /* Hide the hamburger menu icon */
     }

@@ -1,24 +1,38 @@
-#programCardsDetail img{
+.programCardsDetail img {
     width: 100%;
+    height: 100vh;
+    /* Add transition for smooth animation */
+    transition: clip-path 5s ease;
+    /* Set initial clip-path to hide image */
+    clip-path: polygon(0 0, 0% 100%, 100% 100%, 100% 0);
 }
-#detailsCardBody {
+
+/* Add a class to trigger the animation */
+.open-curtain {
+    /* Set clip-path to reveal image */
+    clip-path: polygon(0 0, 0% 100%, 100% 100%, 100% 0);
+}
+
+
+
+.detailsCardBody {
     padding-bottom: 100px;
 }
-#detailsCardBody h1{
+.detailsCardBody h1{
     padding: 20px 0;
     font-size: 50px;
 }
-#detailsCardBody h2{
+.detailsCardBody h2{
     padding: 20px 0;
     font-size: 30px;
 }
-#detailsCardBody p{
+.detailsCardBody p{
     line-height: 30px;
     font-size: 22px;
     width: 80%;
     margin-bottom: 50px;
 }
-#detailsCardBody a{
+.detailsCardBody a{
     padding: 15px 20px;
     color: white;
     background-color: #615DC1;

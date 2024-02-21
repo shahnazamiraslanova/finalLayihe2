@@ -21,6 +21,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
 }
 .programMainFirstImg{
@@ -83,4 +84,53 @@
 .programIcon2, #programIcon1{
     display: flex;
     align-items: center;
+}
+@media (max-width: 1024px) {
+    .programFirst {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    
+    }
+    .programFirst h2{
+        font-size: 20px;
+    }
+    .programFirstIcon{
+        padding:20px 0;
+}
+   
+}
+
+
+
+@media screen and (max-width: 750px) {
+  
+    .programFirst {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    
+    }
+    .proramMainFirstArticle{
+        width: 70%;
+        padding:50px 0;
+        margin-left: 20px;
+    
+    }
+    .programMainArticle{
+        width: 90%;
+    }
+    .proramMainFirstArticle h2{
+        font-size: 25px;
+    }
+    .proramMainFirstArticle p{
+        font-size: 18px;
+    }
+    .programFirstIcon{
+        padding:20px 0;
+}
 }

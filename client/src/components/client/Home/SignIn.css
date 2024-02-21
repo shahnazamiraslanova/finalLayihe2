@@ -65,6 +65,7 @@
 #signForm form{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 #signForm h3{
@@ -100,6 +101,10 @@ width: 85%;
 }
 /* For tablet */
 @media screen and (max-width: 768px) {
+    #signForm input,button{
+        width: 75% !important;
+    }
+    
     #sign .container {
         flex-direction: column;
         justify-content: center;
@@ -171,10 +176,17 @@ width: 85%;
     #sign .container {
         flex-wrap: wrap;
     }
+    #signForm input{
+        width: 70% !important;
+    }
+    #signForm button{
+        width: 70% !important;
 
+    }
     #signArticle,
     #signForm {
         margin-top: 20px; /* Adjust margin between elements */
     }
+   
 }
 

@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
 }
 #formContact h3{
     font-size: 50px;
@@ -29,4 +30,43 @@
     padding: 15px 10px;
 
 
+}
+/* Media query for tablets */
+@media only screen and (max-width: 1023px) {
+    #formContact .container {
+        padding-top: 50px; /* Adjust padding for tablets */
+    }
+
+    #formContact h3 {
+        font-size: 40px; /* Adjust font size for tablets */
+    }
+
+    #formContact form input,
+    #formContact form textarea {
+        width: 90%; /* Adjust input and textarea width for tablets */
+        max-width: 500px; /* Set maximum width for tablets */
+    }
+
+    #contactSubmit {
+        width: 90%; /* Adjust button width for tablets */
+        max-width: 500px; /* Set maximum width for tablets */
+    }
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 767px) {
+    #formContact h3 {
+        font-size: 30px; /* Adjust font size for mobile devices */
+    }
+
+    #formContact form input,
+    #formContact form textarea {
+        width: 90%; /* Adjust input and textarea width for mobile devices */
+        max-width: 100%; /* Set maximum width to full width for mobile devices */
+    }
+
+    #contactSubmit {
+        width: 90%; /* Adjust button width for mobile devices */
+        max-width: 100%; /* Set maximum width to full width for mobile devices */
+    }
 }

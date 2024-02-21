@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import 'typeface-roboto';
-
+import { NavLink } from 'react-router-dom';
 import './SignIn.css';
 
 const SignIn = ({ users }) => {
@@ -51,7 +51,7 @@ const SignIn = ({ users }) => {
             <input type="text" placeholder='Username' value={usernameLogin} onChange={(e) => setUsernameLogin(e.target.value)} />
             <input type="password" placeholder='Password' value={passwordLogin} onChange={(e) => setPasswordLogin(e.target.value)} />
             <button type="submit">Log In</button>
-            <p>You don't have an account? <a href="">Sign Up</a></p>
+            <p>You don't have an account? <NavLink to="signup">Sign Up</NavLink> </p>
           </form>
         </div>
       </div>

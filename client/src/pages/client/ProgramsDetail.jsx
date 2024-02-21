@@ -1,32 +1,50 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, NavLink } from 'react-router-dom';
-import './CSS-ES/ProgramDetail.css'
+import './CSS-ES/ProgramDetail.css';
 
 const ProgramsDetail = () => {
-    const { _id } = useParams(); 
+    const { id } = useParams(); 
     const [programById, setProgramById] = useState({});
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-    const getProgramById = () => {
-        fetch(`http://localhost:8080/programs/${_id}`) 
-            .then(res => {
-                if (!res.ok) {
-                    throw new Error('Failed to fetch program');
-                }
-                return res.json();
-            })
-            .then(program => setProgramById(program))
-            .catch(error => console.error('Error fetching program:', error)); 
-    };
+    // Scroll to the top of the page when component mounts
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     useEffect(() => {
-        getProgramById(); 
+        const getProgramById = async () => {
+            try {
+                const response = await fetch(`http://localhost:8080/programs/${id}`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch program');
+                }
+                const program = await response.json();
+                setProgramById(program);
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        getProgramById();
     }, [id]); 
 
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+
     return (
-        <div id='programCardsDetail'>
+        <div className='programCardsDetail'>
             <img src={programById.img} alt="" />
             <div className="container">
-                <div id='detailsCardBody'>
+                <div className='detailsCardBody'>
                     <h1>{programById.title}</h1>
                     <h2>About:</h2>
                     <p>{programById.description}</p>

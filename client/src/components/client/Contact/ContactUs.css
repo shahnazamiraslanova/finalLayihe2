@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 #contact h1 {
@@ -27,7 +28,7 @@
 }
 
 iframe {
-    width: 1000px;
+   width: 80%;
     height: 450px;
     margin-top: 50px;
    
@@ -39,7 +40,9 @@ iframe {
     display: flex;
 justify-content: center;
 align-items: center;
+text-align: center;
+font-size: 40px;
+
 }
-#contactAll .container h2{
-    font-size: 50px;
-}
+
+

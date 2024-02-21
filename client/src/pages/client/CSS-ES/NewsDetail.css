@@ -1,21 +1,40 @@
-#newsCardsDetail img{
+.newsDetailContainer img {
     width: 100%;
+    height: 100vh;
+    /* Add transition for smooth animation */
+    transition: clip-path 5s ease;
+    /* Set initial clip-path to hide image */
+    clip-path: polygon(0 0, 0% 100%, 100% 100%, 100% 0);
 }
-#detailsCardBodyNews {
+
+/* Add a class to trigger the animation */
+.open-curtain {
+    /* Set clip-path to reveal image */
+    clip-path: polygon(0 0, 0% 100%, 100% 100%, 100% 0);
+}
+
+.newsDetailBody {
     padding-bottom: 100px;
 }
-#detailsCardBodyNews h1{
+
+.newsDetailBody h1 {
     padding: 20px 0;
     font-size: 50px;
 }
 
-#detailsCardBodyNews p{
+.newsDetailBody h2 {
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.newsDetailBody p {
     line-height: 30px;
     font-size: 22px;
     width: 80%;
     margin-bottom: 50px;
 }
-#detailsCardBodyNews a{
+
+.newsDetailBody a {
     padding: 15px 20px;
     color: white;
     background-color: #615DC1;

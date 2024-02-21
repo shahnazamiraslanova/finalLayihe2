@@ -4,8 +4,8 @@ import * as Yup from 'yup';
 import './Form.css';
 
 const ValidationSchema = Yup.object().shape({
-    requested: Yup.string().required('Required'),
-    surname: Yup.string().required('Required'),
+    name: Yup.string().required('Required'),
+    lastName: Yup.string().required('Required'),
     email: Yup.string().email('Invalid email').required('Required'),
     phone: Yup.string()
         .matches(/^[0-9+() -]+$/, 'Invalid phone number')
@@ -14,32 +14,51 @@ const ValidationSchema = Yup.object().shape({
 
 const ContactForm = () => {
     
+    const handleSubmit = async (values, actions) => {
+        try {
+            const response = await fetch('http://localhost:8080/contacts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(values)
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to submit form');
+            }
+
+            console.log('Form submitted successfully');
+            actions.resetForm();
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        } finally {
+            actions.setSubmitting(false);
+        }
+    };
+
     return (
         <div id="formContact">
             <div className="container">
                 <h3>Let’s Start a Conversation</h3>
                 <Formik
                     initialValues={{
-                        requested: '',
-                        surname: '',
+                        name: '',
+                        lastName: '',
                         email: '',
                         phone: '',
                         message: '',
                     }}
                     validationSchema={ValidationSchema}
-                    onSubmit={(values, actions) => {
-                        // Handle form submission here
-                        console.log(values);
-                        actions.setSubmitting(false);
-                    }}
+                    onSubmit={handleSubmit}
                 >
                     {({ isSubmitting }) => (
                         <Form>
-                            <Field type="text" name="requested" placeholder="Name" />
-                            <ErrorMessage name="requested" component="div" />
+                            <Field type="text" name="name" placeholder="Name" />
+                            <ErrorMessage name="name" component="div" />
 
-                            <Field type="text" name="surname" placeholder="Last Name" />
-                            <ErrorMessage name="surname" component="div" />
+                            <Field type="text" name="lastName" placeholder="Last Name" />
+                            <ErrorMessage name="lastName" component="div" />
 
                             <Field type="text" name="email" placeholder="Your Email" />
                             <ErrorMessage name="email" component="div" />
@@ -54,8 +73,8 @@ const ContactForm = () => {
                                 rows={10}
                                 cols={30}
                             />
-                            <button type="submit"  id='contactSubmit' >
-                                Submit
+                            <button type="submit" disabled={isSubmitting} id='contactSubmit'>
+                                {isSubmitting ? 'Submitting...' : 'Submit'}
                             </button>
                         </Form>
                     )}

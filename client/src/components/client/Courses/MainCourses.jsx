@@ -169,7 +169,7 @@ const MainCourses = () => {
                             <p className='price'>Price: ${course.price}</p>
                             <div className='icons'>
                                 {loggedInUser && loggedInUser.favs && loggedInUser.favs[course._id] ? (
-                                    <IoIosHeart onClick={() => toggleFavorite(course)} className='heartIcon' />
+                                    <IoIosHeart onClick={() => toggleFavorite(course)} className='heartIcon' id='dolu' />
                                 ) : (
                                     <IoIosHeartEmpty onClick={() => toggleFavorite(course)} className='heartIcon' />
                                 )}
